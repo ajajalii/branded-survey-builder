@@ -1,0 +1,19 @@
+name = "branded-survey-builder-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+# ─── D1 Database ───────────────────────────────────────────────────────────────
+# `database_name` is the human-readable name in your Cloudflare dashboard.
+# `database_id`   is filled in after running: wrangler d1 create branded-survey-db
+# `binding`       is the variable name available in your Worker as `env.DB`.
+[[d1_databases]]
+binding = "DB"
+database_name = "branded-survey-db"
+database_id = "e6ae18e8-d027-4cf7-96d5-ed931f2d5eed"
+
+# ─── Environment Variables ─────────────────────────────────────────────────────
+# JWT_SECRET is loaded from a Wrangler secret (never commit the real value).
+# Run: wrangler secret put JWT_SECRET
+# For local dev, set it in .dev.vars (gitignored).
+[vars]
+JWT_SECRET = "dev-secret-change-in-production"

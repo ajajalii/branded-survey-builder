@@ -1,0 +1,12 @@
+{
+  "name": "branded-survey-builder",
+  "private": true,
+  "scripts": {
+    "check": "pnpm -r check",
+    "typecheck": "pnpm -r typecheck",
+    "dev": "pnpm -r --parallel dev"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}
