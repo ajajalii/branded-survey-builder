@@ -4,9 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: [
-      "subapostolic-sam-injunctively.ngrok-free.dev",
-    ],
+    allowedHosts: ["subapostolic-sam-injunctively.ngrok-free.dev"],
 
     proxy: {
       "/api": {

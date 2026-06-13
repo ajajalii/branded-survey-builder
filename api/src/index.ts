@@ -1,5 +1,3 @@
-
-
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import authRouter from "./routes/auth";
@@ -22,7 +20,6 @@ app.route("/api/auth", authRouter);
 app.route("/api/survey", surveyRouter);
 // Health check — useful for verifying the Worker is deployed
 app.get("/api/health", (c) => c.json({ ok: true }));
-
 
 // Catch-all 404
 app.notFound((c) => c.json({ error: "Not found" }, 404));
