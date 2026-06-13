@@ -3,4 +3,3 @@ dist/
 .wrangler/
 *.local
 .dev.vars
-.env.production
