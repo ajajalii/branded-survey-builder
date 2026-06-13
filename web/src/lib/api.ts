@@ -34,7 +34,7 @@ export async function apiRequest<T>(path: string, options: ApiOptions = {}): Pro
 
   const token = getToken();
   if (token) {
-    headers["Authorization"] = `Bearer ${token}`;
+    headers.Authorization = `Bearer ${token}`;
   }
 
   const response = await fetch(`${BASE_URL}${path}`, {
