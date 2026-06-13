@@ -15,5 +15,3 @@ database_id = "e6ae18e8-d027-4cf7-96d5-ed931f2d5eed"
 # JWT_SECRET is loaded from a Wrangler secret (never commit the real value).
 # Run: wrangler secret put JWT_SECRET
 # For local dev, set it in .dev.vars (gitignored).
-[vars]
-JWT_SECRET = "dev-secret-change-in-production"
