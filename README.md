@@ -13,6 +13,22 @@ This README explains:
 
 ---
 
+## Screenshots
+
+### Login page
+
+![Login page](web/src/assets/login_page.png)
+
+### Dashboard
+
+![Dashboard](web/src/assets/dashboard.png)
+
+### Survey page
+
+![Survey page](web/src/assets/survey_page.png)
+
+---
+
 ## What this project does
 
 This app supports:
