@@ -1,13 +1,3 @@
-// src/routes/auth.ts
-//
-// All three auth endpoints are grouped under the "/auth" prefix.
-// The router is mounted at "/api/auth" in src/index.ts.
-//
-// WHY NOT USE AN AUTH LIBRARY (Lucia, Auth.js, etc.)?
-// They add abstractions that are hard to explain line-by-line in an interview.
-// Rolling a minimal version ourselves keeps every decision visible and
-// defensible. The tradeoff is that we own the security logic — which is why
-// we're careful about password hashing and token handling.
 
 import { Hono } from "hono";
 import { generateToken } from "../lib/jwt";
