@@ -51,12 +51,7 @@ auth.post("/signup", async (c) => {
     return c.json({ error: "Email already in use" }, 409);
   }
 
-  // 5. Hash the password
-  //    WHY NOT bcrypt?
-  //    bcrypt is not available in the Workers runtime. We use the Web Crypto
-  //    API instead: PBKDF2 is a standard password-hashing function supported
-  //    natively by SubtleCrypto. We use 100,000 iterations of SHA-256 —
-  //    this is the NIST-recommended minimum as of 2023.
+
   const passwordHash = await hashPassword(password);
 
   // 6. Persist the user
