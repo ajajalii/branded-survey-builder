@@ -51,7 +51,6 @@ auth.post("/signup", async (c) => {
     return c.json({ error: "Email already in use" }, 409);
   }
 
-
   const passwordHash = await hashPassword(password);
 
   // 6. Persist the user
