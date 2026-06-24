@@ -40,9 +40,6 @@ auth.post("/signup", async (c) => {
     return c.json({ error: "Password must be at least 8 characters" }, 400);
   }
 
-  // 4. Check email uniqueness
-  //    D1 queries return `results` (array of rows) and metadata.
-  //    `.first()` returns the first row or null — perfect for existence checks.
   const existing = await c.env.DB.prepare("SELECT id FROM users WHERE email = ?")
     .bind(email.toLowerCase())
     .first();
