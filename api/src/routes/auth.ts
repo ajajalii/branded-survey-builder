@@ -17,8 +17,7 @@ auth.post("/signup", async (c) => {
     return c.json({ error: "Invalid JSON body" }, 400);
   }
 
-  // 2. Validate shape — we check manually rather than pulling in a schema
-  //    library (zod etc.) to keep the dependency footprint small.
+
   if (
     typeof body !== "object" ||
     body === null ||
