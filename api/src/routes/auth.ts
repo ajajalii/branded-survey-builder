@@ -86,10 +86,7 @@ auth.post("/login", async (c) => {
     .bind(email.toLowerCase())
     .first<UserRow>();
 
-  // WHY THE SAME ERROR FOR "USER NOT FOUND" AND "WRONG PASSWORD"?
-  // Distinguishing between the two would let an attacker enumerate which
-  // email addresses have accounts. A unified "Invalid credentials" response
-  // prevents that information leak.
+
   if (!user) {
     return c.json({ error: "Invalid credentials" }, 401);
   }
